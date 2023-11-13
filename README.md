@@ -1,1 +1,2 @@
-# home.github.io
+# ほーむぺーじ
+$\int f(x)\, \mathrm{d}x$
