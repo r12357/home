@@ -1,2 +1,2 @@
 # ほーむぺーじ
-$$\int f(x)\, \mathrm{d}x$$
+$$\int f(x) \ \mathrm{d}x$$
