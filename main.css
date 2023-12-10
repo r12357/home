@@ -1,0 +1,48 @@
+
+#title{
+    color:black;
+    
+}
+
+#jikosyoukai{
+    text-align:center;
+    font-size:20px;
+}
+
+.maintext {
+    text-align:center;
+}
+
+#ability {
+    padding: 20px;
+    font-size: 20px;
+    text-align:left;
+    display: inline-block;
+}
+
+.h2 {
+    text-align:center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+.item {
+    padding: 20px;
+    font-size: 18px;
+}
+}
+
+
+.left-align{
+    text-align:left;
+}
+
+a:link{
+    color:blue;
+}
+
+a:visited{
+    color:blue;
+}
