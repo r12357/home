@@ -1,3 +1,6 @@
+body {
+    background-color:gainsboro;
+}
 
 #title{
     color:black;
@@ -11,6 +14,13 @@
 
 .maintext {
     text-align:center;
+}
+
+#alg-ge {
+    padding: 20px;
+    font-size: 20px;
+    text-align:left;
+    display: inline-block;
 }
 
 #ability {

@@ -2,7 +2,7 @@
 <html lang = "ja">
 
 <head>
-    <title>たいとる</title>
+    <title>趣味</title>
     <meta charset="utf-8">
     <link rel = "stylesheet" href = "main.css">
     <!-- <script type = "text/javascript" 
@@ -21,11 +21,14 @@
 </head>
 
 <body>
+    <div class = container>
+        <div class = item><a href = "index.html">ホーム画面へ</a></div>
+    </div>
     <h2>趣味の紹介</h2>
-    <div id = hobby>
-        私は先ほど述べたように、代数幾何、位相幾何に興味があり、それについて
-        少し紹介します。<br>
-        <h3>代数幾何について</h3>
+    私は<a href = "index.html">ホーム</a>で述べたように、代数幾何、位相幾何に興味があり、それについて少し紹介します。<br>
+    <h2>代数幾何について</h2>
+    <div class = maintext>
+    <div id = alg-ge>
         代数幾何とは多項式の連立方程式が満たす零点集合について興味をもって研究する分野です。<br>
         たとえば、
     
@@ -39,8 +42,11 @@
         \end{equation*}
         について考えてみましょう。<br>
         図形的に考えれば、これは直線 
-        $ y = x $ 
-        と半径の円 $ x^2 + y^2 = 1 $ の交点の集合を表すので
+        \( y = x \) 
+        と半径の円
+        \( x^2 + y^2 = 1 \) 
+        の交点の集合を表すので<br>
         その零点集合\( V(f_1,f_2) \)は\( \left\{ (\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}),(-\frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}})\right\} \)
+    </div>
     </div>
 </body>
