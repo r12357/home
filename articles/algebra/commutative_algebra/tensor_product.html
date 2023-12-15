@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "ja">
+
+<head>
+    <title>趣味</title>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href = "../../articles_list.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <!-- <div class = container>
+        <div class = item><a href = "index.html">ホーム画面へ</a></div>
+    </div> -->
+    <h2>テンソル積</h2>
+    <div class = main>
+    <div class = left>
+    \(A\)加群\(M,N,L\)に関して、\(A\)双線型写像(A-bilinear map)
+    \(\phi : M\times N \to L\)
+    \begin{array}{lll}
+        &\phi(x_1 + x_2,y) = \phi(x_1,y) + \phi(x_2,y)\\
+        &\phi(x,y_1+y_2) = \phi(x,y_1) + \phi(x,y_2)\\
+        &\phi(ax,y) = \phi(x,ay)=a\phi(x,y) \qquad (a\in A, x,x_1,x_2 \in M, y,y_1,y_2 \in N)
+    \end{array}
+    を考える。ここで、\(M\times N\)はただの直積集合であって\(A\)加群とは考えていない。<br>
+    この\(\phi\)のような\(M\times N\)からの任意の双線型写像を支配するテンソル積という新しい
+    \(A\)加群が構成できる。<br>
+    <div class = thm>
+        <font size = "5">定理1</font><br>
+        \(A\)加群\(M,N\)に対して、次の性質をもつ\(A\)加群\(M\otimes_{A} N\)
+        と\(A\)双線型写像\(\tau : M\times N \to M \otimes_{A} N\)
+        の組が、同型を除いて一意的に存在する。<br>
+        すなわち、任意の\(A\)双線型写像\(\phi : M\times N \to L\)に対して、<br>
+        \(A\)加群としての準同型\(f : M\otimes_{A} N \to L\)で\(f \circ \tau = \phi \)となるものが
+        唯一つ存在する。
+    </div>
+    </div>
+    </div>
+</body>

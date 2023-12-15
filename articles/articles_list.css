@@ -1,0 +1,40 @@
+body {
+    background-color:gainsboro;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.item {
+    padding: 20px;
+    font-size: 18px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main {
+    text-align: center;
+}
+
+.thm {
+    text-align: left;
+    display: inline-block;
+    padding:8px 19px;
+    margin: 2em 0;
+    color: #2c2c2f;
+    background: #bdccdc;
+    border-top: solid 5px #5989cf;
+    border-bottom: solid 5px #5989cf;
+}
+
+.left {
+    text-align: left;
+    display: inline-block;
+}
