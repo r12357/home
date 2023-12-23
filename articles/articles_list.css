@@ -34,7 +34,44 @@ body {
     border-bottom: solid 5px #5989cf;
 }
 
+.prop {
+    text-align: left;
+    display: inline-block;
+    padding:8px 19px;
+    margin: 2em 0;
+    color: #2c2c2f;
+    background: #cedcbd;
+    border-top: solid 5px #88cf59;
+    border-bottom: solid 5px #88cf59;
+}
+
 .left {
     text-align: left;
     display: inline-block;
 }
+
+ul {
+    border: solid 2px #ffb03f;
+    padding: 0 0.5em;
+    position: relative;
+  }
+  
+  ul li {
+    line-height: 1.5;
+    padding: 0.5em 0 0.5em 1.4em;
+    border-bottom: dashed 1px silver;
+    list-style-type: none!important;
+  }
+  
+  ul li:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f138";/*アイコン種類*/
+    position: absolute;
+    left : 0.5em; /*左端からのアイコンまで*/
+    color: #ffb03f; /*アイコン色*/
+    font-weight: 900;
+  }
+  
+  ul li:last-of-type {
+    border-bottom: none;
+  }

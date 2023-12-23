@@ -13,8 +13,9 @@
         <div class = item><a href = "index.html">ホーム画面へ</a></div>
     </div> -->
     <h2>テンソル積</h2>
-    <div class = main>
-    <div class = left>
+    <div class = "main">
+    <div class = "left">
+    <h3>テンソル積の定義</h3>
     \(A\)加群\(M,N,L\)に関して、\(A\)双線型写像(A-bilinear map)
     \(\phi : M\times N \to L\)
     \begin{array}{lll}
@@ -25,7 +26,7 @@
     を考える。ここで、\(M\times N\)はただの直積集合であって\(A\)加群とは考えていない。<br>
     この\(\phi\)のような\(M\times N\)からの任意の双線型写像を支配するテンソル積という新しい
     \(A\)加群が構成できる。<br>
-    <div class = thm>
+    <div class = "thm">
         <font size = "5">定理1</font><br>
         \(A\)加群\(M,N\)に対して、次の性質をもつ\(A\)加群\(M\otimes_{A} N\)
         と\(A\)双線型写像\(\tau : M\times N \to M \otimes_{A} N\)
@@ -33,6 +34,52 @@
         すなわち、任意の\(A\)双線型写像\(\phi : M\times N \to L\)に対して、<br>
         \(A\)加群としての準同型\(f : M\otimes_{A} N \to L\)で\(f \circ \tau = \phi \)となるものが
         唯一つ存在する。
+    </div><br>
+    \(M\otimes_{A} N\)を\(M\)と\(N\)の\(A\)上の<b>テンソル積</b>(tensor product)という。
+    定理の証明は省略する。<br>
+    ところで、\(A\)双線型写像の全体のなす集合を
+    \begin{equation*}
+        \text{Bil}_{A}(M\times N; L) := \{\phi : M\times N \to L\ |\ \phi : \text{A-bilinear map} \}
+    \end{equation*}
+    とかくと、\(A\)加群であるテンソル積\(M\otimes_{A} N\)は、任意の\(A\)加群\(L\)に対して、
+    \begin{equation*}
+        \text{Hom}_{A}(M\otimes_{A} N,L) \stackrel{\sim}{\longrightarrow} \text{Bil}_{A}(M\times N ; L) \quad (f \mapsto f\circ \tau)
+    \end{equation*}
+    が全単射になるという性質で特徴づけられる。これは、\(A\)加群の圏から集合への函手
+    \begin{equation*}
+        L \mapsto \text{Bil}_{A}(M\times N; L)
+    \end{equation*}
+    を<b>表現する対象</b>がテンソル積(という\(A\)加群)\(M\otimes_{A} N\)である。という。<br>
+    言い換えれば、\(A\)双線型写像\(\tau : M\times N \to M\otimes_{A} N \)が任意の\(A\)双線型写像\(M\times N \to L\)を支配してる<br>
+    または<b>普遍</b>(universal)\(A\)<b>双線型写像</b>を与えている、ということである。<br>
+    (テンソル積とHomの随伴性については後日かく)<br>
+    普遍双線型写像\(\tau \)を通常<b>元のテンソル積</b>といって
+    \begin{equation*}
+        \tau (x,y) = x\otimes y \quad (x\in M,\ y\in N)
+    \end{equation*}
+    とかく。<br>
+    定理の証明からわかるよう(書いていないが)に、テンソル積の一つの解釈として、\(A\)加群\(M\otimes_{A} N \)は
+    \(x\otimes y\ (x\in M,\ y\in N) \)を生成元とし、関係式
+    \begin{array}{lll}
+        &(x_{1} + x_{2})\otimes y = x_{1}\otimes y + x_{2}\otimes y\\
+        &x\otimes (y_{1} + y_{2}) = x\otimes y_{1} + x\otimes y_{2}\\
+        &(ax)\otimes y = x\otimes (ay) = a(x\otimes y)
+    \end{array}
+    がなりたつ\(A\)加群のことであるといっていい。
+    <h3>テンソル積の性質</h3>
+    <div class = "prop">
+        <font size = "5">命題1</font><br>
+        (1)  \(M\otimes_{A}N \)の元は\(\sum_{i}a_{i}x_{i}\otimes y_{i} \ (a_{i}\in A,\ x_{i}\in M,\ y_{i}\in N) \)とかける。(一意性はない)<br>
+        (2)  \(A\)準同型\(f: M\to M',\ g: N \to N'\)に対し、\(A\)準同型\(f\otimes g: M\otimes_{A} N \to M'\otimes N'\)で
+        \begin{equation*}
+            (f\otimes g)(x\otimes y) = f(x)\otimes g(x)\quad (x\in M,\ y \in N)
+        \end{equation*}
+        (3)  \(f: M \to M'\)が全射ならば、\(f\otimes \text{Id}_{N}: M\otimes_{A} N \to M'\otimes_{A} N\)も全射である<br>
+        (4)  \(A\)加群の族\(\{M_{i}\}_{i\in I}\)に対し、直和とテンソル積の構成は可換である。
+        \begin{equation*}
+            (\bigoplus_{i\in I}M_{i})\otimes_{A} N \simeq \bigoplus_{i\in I}(M_{i}\otimes_{A} N)
+        \end{equation*}
+        (5)  \(\{x_{i}\}_{i},\ \{y_{j}\}_{j}\)を基底とする自由加群\(M,N\)のテンソル積\(M\otimes_{A}N\)は\(\{x_{i}\otimes y_{j}\}_{i,j}\)を基底とする自由加群である。
     </div>
     </div>
     </div>
