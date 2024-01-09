@@ -38,10 +38,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
 .item {
     padding: 20px;
     font-size: 18px;
-}
 }
 
 
