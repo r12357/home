@@ -84,8 +84,9 @@
     \end{equation*}
     が成り立つ。<br>
     \begin{align*}
-        (\because \qquad  |z + w|^2 &= (z + w)(\bar{z} + \bar{w}) = z\bar{z} + z\bar{w} + w\bar{z} + w\bar{w}\\
-        &= |z|^2 + 2\Re (z\bar{w}) + |w|^2 \leq |z|^2 + 2|z\bar{w}| + |w|^2\\
+        (\because|z + w|^2 &= (z + w)(\bar{z} + \bar{w}) = z\bar{z} + z\bar{w} + w\bar{z} + w\bar{w}\\
+        &= |z|^2 + 2\Re (z\bar{w}) + |w|^2 \\
+        &\leq |z|^2 + 2|z\bar{w}| + |w|^2\\
         &= |z|^2 + 2|z||w| + |w|^2 =  (|z| + |w|)^2
     \end{align*}
     この不等式から複素平面上の任意の3点\(z_{1},z_{2},z_{3}\)に関する三角不等式
@@ -102,9 +103,10 @@
         &|z_{1} + z_{2} + \cdots + z_{n}| \leq |z_{1}| + |z_{2}| + \cdots + |z_{n}|
     \end{align*}
     を得る。特に
-    \begin{equation*}
-        |a_{0} + a_{1}z + a_{2}z^{2} + \cdots + a_{n}z^{n}| \leq |a_{0}| + |a_{1}||z| + |a_{2}||z|^{2} + \cdots + |a_{n}||z|^{n}
-    \end{equation*}
+    \begin{align*}
+        &|a_{0} + a_{1}z + a_{2}z^{2} + \cdots + a_{n}z^{n}| \\
+        &\qquad \leq |a_{0}| + |a_{1}||z| + |a_{2}||z|^{2} + \cdots + |a_{n}||z|^{n}
+    \end{align*}
     <div class = "thm">
         (Cauchyの判定法) <br>
         複素数列\(\{z_{n}\}\)が収束するための必要十分条件は、任意の正の実数\(\varepsilon\)に対してある自然数\(n_{0}\)が存在して
@@ -151,9 +153,10 @@
         S_{n} = Z_{1}^1Z_{1}^2 + (Z_{2}^1Z_{2}^2 - Z_{1}^1Z_{1}^2)+ \cdots + (Z_{n}^1Z_{n}^2 - Z_{n-1}^1Z_{n-1}^2)
     \end{equation*}
     で示されるように、\(\sum z_{n}\zeta_{m}\)の項を配列する。すなわち
-    \begin{equation*}
-        S = z_{1}\zeta_{1} + (z_{1}\zeta_{2} + z_{2}\zeta_{1} + z_{2}\zeta_{2}) + (z_{1}\zeta_{3} + z_{2}\zeta_{3} + z_{3}\zeta_{1} + z_{3}\zeta_{2} + z_{3}\zeta_{3}) + \cdots
-    \end{equation*}
+    \begin{align*}
+        S = &z_{1}\zeta_{1} + (z_{1}\zeta_{2} + z_{2}\zeta_{1} + z_{2}\zeta_{2}) \\
+        &\quad +\ (z_{1}\zeta_{3} + z_{2}\zeta_{3} + z_{3}\zeta_{1} + z_{3}\zeta_{2} + z_{3}\zeta_{3}) + \cdots
+    \end{align*}
     すると
     \begin{equation*}
         S_{n} = Z_{n}^1Z_{n}^2
