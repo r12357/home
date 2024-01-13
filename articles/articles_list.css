@@ -1,5 +1,8 @@
 body {
     background-color:gainsboro;
+}
+
+.article {
     font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
 }
 html {
@@ -24,6 +27,10 @@ html {
     justify-content: center;
 }
 
+.figure img {
+    max-width: 100%;
+    height: auto;
+}
 
 .main {
     text-align: center;
