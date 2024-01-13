@@ -78,7 +78,7 @@
         \overline{\left( \frac{w}{z} \right)} = \frac{\bar{w}}{\bar{z}}
     \end{equation*}
     これと上記の和、差、積の共役に関する法則により、有限個の複素数\(z_{1},z_{2},\cdots ,z_{n}\)から有限回の四則演算によって複素数\(w\)を得たとすれば、\(\bar{z_{1}},\bar{z_{2}},\cdots,\bar{z_{n}}\)から同じ演算を施すことで\(\bar{w}\)を得る。すなわち、対応\(:z\to \bar{z}\)は体\(\mathbf{C}\)から\(\mathbf{C}\)への同型写像(isomorphism)を与える。<br>
-    任意の複素数\(z,w\)に対して三角不等式
+    任意の複素数\(z,w\)に対して不等式
     \begin{equation*}
         |z + w| \leq |z| + |w|
     \end{equation*}
@@ -88,6 +88,32 @@
         &= |z|^2 + 2\Re (z\bar{w}) + |w|^2 \leq |z|^2 + 2|z\bar{w}| + |w|^2\\
         &= |z|^2 + 2|z||w| + |w|^2 =  (|z| + |w|)^2
     \end{align*}
+    この不等式から複素平面上の任意の3点\(z_{1},z_{2},z_{3}\)に関する三角不等式
+    \begin{equation*}
+        |z_{1} + z_{2}| \leq |z_{1} - z_{2}| + |z_{2} - z_{3}|
+    \end{equation*}
+    が従う。\(|z| \leq |z - w| + |w|\)であるから\(|z| - |w| \leq |z - w|\)同様に\(|w| - |z| \leq |w - z|\)を得る。ゆえに
+    \begin{equation*}
+        ||z| - |w|| \leq |z - w|
+    \end{equation*}
+    以上の関係を繰り返し用いれば
+    \begin{align*}
+        &|z_{1}z_{2}\cdots z_{n}| = |z_{1}||z_{2}|\cdots |z_{n}|\\
+        &|z_{1} + z_{2} + \cdots + z_{n}| \leq |z_{1}| + |z_{2}| + \cdots + |z_{n}|
+    \end{align*}
+    を得る。特に
+    \begin{equation*}
+        |a_{0} + a_{1}z + a_{2}z^{2} + \cdots + a_{n}z^{n}| \leq |a_{0}| + |a_{1}||z| + |a_{2}||z|^{2} + \cdots + |a_{n}||z|^{n}
+    \end{equation*}
+    <div class = "thm">
+        (Cauchyの判定法) <br>
+        複素数列\(\{z_{n}\}\)が収束するための必要十分条件は、任意の正の実数\(\varepsilon\)に対してある自然数\(n_{0}\)が存在して
+        \begin{equation*}
+            n,m > n_{0}\ \Rightarrow \ |z_{n} - z_{m}| < \varepsilon
+        \end{equation*}
+        となるようにできることである。
+    </div><br>
+    これは、すなわち点列の収束に関するCauchyの判定法に他ならない。
     </div>
     </div>
 </body>
