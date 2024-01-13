@@ -138,14 +138,25 @@
     絶対収束する二つの級数の和の積に関して分配法則が成り立つ。<br>
     \(w = \sum z_{n},\ \omega = \sum \zeta_{n}\)がともに絶対収束しているとき
     \begin{equation*}
-        w\omega = z_{1}\zeta_{1} + z_{2}\zeta_{1} + z_{1}\zeta_{2} + z_{3}\zeta_{1} + z_{2}\zeta_{2} + z_{1}\zeta_{3} + \cdots
+        w\omega = z_{1}\zeta_{1} + z_{2}\zeta_{1} + z_{1}\zeta_{2} + z_{3}\zeta_{1} + z_{2}\zeta_{2} + z_{1}\zeta_{3} + \cdots = \sum_{l = 2}^{\infty}\left( \sum_{n + m = l} z_{n}\zeta_{m} \right)\quad \cdots (*)
     \end{equation*}
+    (分配法則であることがわかりにくいかもしれないが、部分和で考えればわかりやすい)<br>
+    なぜなら、
+    \begin{equation*}
+        \sigma_{n} = \sum_{k = 1}^{n}|z_{n-k+1}||\zeta_{k}|
+    \end{equation*}
+    とおけば\(\sum \sigma_{n} = \sum |z_{n}| \sum |\zeta_{n}|\)となる。(例えば、[1]のp48を見よ。)であるから、\((*)\)の右辺の級数は絶対収束し、
+    \begin{align*}
+        &\left| \sum_{n = 1}^{m}z_{n} \sum_{n = 1}^{m}\zeta_{n} - \sum_{n = 1}^{m}\sum_{k = 1}^{n}z_{n-k+1}\zeta_{k} \right| \\
+        &\quad \leq \sum_{n = 1}^{m}|z_{n}|\sum_{n = 1}^{m}|\zeta_{n}| - \sum_{n = 1}^{m}\sigma_{n} \longrightarrow 0 \quad (m \to \infty)
+    \end{align*}
+    となるからである。
     <h2>参考文献</h2>
     <ul>
-        <li>杉浦光夫「解析入門I」</li>
-        <li>小平邦彦「複素解析」</li>
-        <li>エリアス・M・スタイン、ラミ・シャカルチ「複素解析」</li>
-        <li>雪江明彦「環と体とガロア理論」</li>
+        <li>[1]杉浦光夫「解析入門I」</li>
+        <li>[2]小平邦彦「複素解析」</li>
+        <li>[3]エリアス・M・スタイン、ラミ・シャカルチ「複素解析」</li>
+        <li>[4]雪江明彦「環と体とガロア理論」</li>
     </ul>
     </div>
     </div>
