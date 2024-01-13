@@ -141,22 +141,34 @@
         w\omega = z_{1}\zeta_{1} + z_{2}\zeta_{1} + z_{1}\zeta_{2} + z_{3}\zeta_{1} + z_{2}\zeta_{2} + z_{1}\zeta_{3} + \cdots = \sum_{l = 2}^{\infty}\left( \sum_{n + m = l} z_{n}\zeta_{m} \right)\quad \cdots (*)
     \end{equation*}
     (分配法則であることがわかりにくいかもしれないが、部分和で考えればわかりやすい)<br>
-    なぜなら、
+    で、かつ右辺の級数は絶対収束する。実際
     \begin{equation*}
-        \sigma_{n} = \sum_{k = 1}^{n}|z_{n-k+1}||\zeta_{k}|
+        \sum_{l = 2}^{n}\sum_{i + k = l}|z_{i}\zeta_{k}| \leq \sum_{n = 1}^{\mu}|z_{n}|\sum_{m = 1}^{\nu}|\zeta_{m}| 
     \end{equation*}
-    とおけば\(\sum \sigma_{n} = \sum |z_{n}| \sum |\zeta_{n}|\)となる。(例えば、[1]のp48を見よ。)であるから、\((*)\)の右辺の級数は絶対収束し、
-    \begin{align*}
-        &\left| \sum_{n = 1}^{m}z_{n} \sum_{n = 1}^{m}\zeta_{n} - \sum_{n = 1}^{m}\sum_{k = 1}^{n}z_{n-k+1}\zeta_{k} \right| \\
-        &\quad \leq \sum_{n = 1}^{m}|z_{n}|\sum_{n = 1}^{m}|\zeta_{n}| - \sum_{n = 1}^{m}\sigma_{n} \longrightarrow 0 \quad (m \to \infty)
-    \end{align*}
-    となるからである。
+    となるように\(\mu,\nu\)をとることができる。\(\sum z_{n},\sum \zeta_{n}\)は絶対収束するので、左辺は有界である。よって\(\sum z_{n}\zeta_{m}\)は絶対収束する。<br>
+    級数\(\sum z_{n}\zeta_{m}\)は絶対収束するので、項の順序を任意にとってよいし、任意に括弧でくくってもよい。よって\(\sum z_{n},\sum \zeta_{m}\)の第\(n\)項までの部分和を\(Z_{n}^1,Z_{n}^2\)とすれば
+    \begin{equation*}
+        S_{n} = Z_{1}^1Z_{1}^2 + (Z_{2}^1Z_{2}^2 - Z_{1}^1Z_{1}^2)+ \cdots + (Z_{n}^1Z_{n}^2 - Z_{n-1}^1Z_{n-1}^2)
+    \end{equation*}
+    で示されるように、\(\sum z_{n}\zeta_{m}\)の項を配列する。すなわち
+    \begin{equation*}
+        S = z_{1}\zeta_{1} + (z_{1}\zeta_{2} + z_{2}\zeta_{1} + z_{2}\zeta_{2}) + (z_{1}\zeta_{3} + z_{2}\zeta_{3} + z_{3}\zeta_{1} + z_{3}\zeta_{2} + z_{3}\zeta_{3}) + \cdots
+    \end{equation*}
+    すると
+    \begin{equation*}
+        S_{n} = Z_{n}^1Z_{n}^2
+    \end{equation*}
+    したがって
+    \begin{equation*}
+        S = \lim_{n \to \infty}S_{n} = \lim_{n \to \infty}Z_{n}^1Z_{n}^2 = w\omega
+    \end{equation*} 
     <h2>参考文献</h2>
     <ul>
         <li>[1]杉浦光夫「解析入門I」</li>
         <li>[2]小平邦彦「複素解析」</li>
-        <li>[3]エリアス・M・スタイン、ラミ・シャカルチ「複素解析」</li>
-        <li>[4]雪江明彦「環と体とガロア理論」</li>
+        <li>[3]高木貞二「解析概論」</li>
+        <li>[4]エリアス・M・スタイン、ラミ・シャカルチ「複素解析」</li>
+        <li>[5]雪江明彦「環と体とガロア理論」</li>
     </ul>
     </div>
     </div>
