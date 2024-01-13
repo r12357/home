@@ -131,7 +131,15 @@
     \begin{equation*}
         |w_{n} - w_{m}| = \left| \sum_{i = m + 1}^{n}z_{i} \right| \leq \sum_{i = m + 1}^{n}|z_{i}| = \sigma_{n} - \sigma_{m}
     \end{equation*}
-    であるから、Cauchyの判定法により、級数\(\sum |z_{n}|\)が収束するなら級数\(\sum z_{n}\)も収束する。このとき\(\sum z_{n}\)は絶対収束するという。
+    であるから、Cauchyの判定法により、級数\(\sum |z_{n}|\)が収束するなら級数\(\sum z_{n}\)も収束する。このとき\(\sum z_{n}\)は絶対収束するという。\(\sum z_{n}\)が絶対収束するなら
+    \begin{equation*}
+        \left| \sum_{n = 1}^{\infty}z_{n} \right| = \left| \lim_{m \to \infty} \sum_{n = 1}^{m}z_{n} \right| = \lim_{m \to \infty} \left|\sum_{n = 1}^{m}z_{n}\right| \leq \lim_{m \to \infty} \sum_{n = 1}^{m}|z_{n}| = \sum_{n = 1}^{\infty} |z_{n}|
+    \end{equation*}
+    絶対収束する二つの級数の和の積に関して分配法則が成り立つ。<br>
+    \(w = \sum z_{n},\ \omega = \sum \zeta_{n}\)がともに絶対収束しているとき
+    \begin{equation*}
+        w\omega = z_{1}\zeta_{1} + z_{2}\zeta_{1} + z_{1}\zeta_{2} + z_{3}\zeta_{1} + z_{2}\zeta_{2} + z_{1}\zeta_{3} + \cdots
+    \end{equation*}
     <h2>参考文献</h2>
     <ul>
         <li>杉浦光夫「解析入門I」</li>
