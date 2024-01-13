@@ -113,8 +113,25 @@
         \end{equation*}
         となるようにできることである。
     </div><br>
-    これは、すなわち点列の収束に関するCauchyの判定法に他ならない。
-
+    これは、すなわち点列の収束に関するCauchyの判定法に他ならない。<br>
+    \(||z_{n}| - |w|| \leq |z_{n} - w|\)より\(\lim z_{n} = w\)ならば\(\lim |z_{n}| = |w|\)となる。すなわち、複素数列\(\{z_{n}\}\)が収束するならば\(\{|z_{n}|\}\)も収束して
+    \begin{equation*}
+        \lim_{n \to \infty}|z_{n}| = \left|\lim_{n \to \infty} z_{n} \right|
+    \end{equation*}
+    複素数\(z_{n}\)を項とする級数\( \sum z_{n} = z_1 + z_2 + \cdots + z_{n} + \cdots\)については、その部分和
+    \begin{equation*}
+        w_{n} = \sum_{i = 1}^{n}z_{i} = z_{1} + z_{2} + \cdots + z_{n}
+    \end{equation*}
+    のなす複素数列\(\{w_{n}\}\)が収束するとき\(\sum z_{n}\)は収束するといい、\(w=\lim w_{n}\)をこの級数の和といって
+    \begin{equation*}
+        w = \sum_{n=1}^{\infty}z_{n} = z_{1} + z_{2} + \cdots 
+    \end{equation*}
+    とかく。\(\{w_{n}\}\)が収束しないとき級数\(\sum z_{n}\)は発散するという。<br>
+    \(\sigma_{n} = |z_{1}| + |z_{2}| + \cdots + |z_{n}|\)とおけば、\(m < n\)のとき
+    \begin{equation*}
+        |w_{n} - w_{m}| = \left| \sum_{i = m + 1}^{n}z_{i} \right| \leq \sum_{i = m + 1}^{n}|z_{i}| = \sigma_{n} - \sigma_{m}
+    \end{equation*}
+    であるから、Cauchyの判定法により、級数\(\sum |z_{n}|\)が収束するなら級数\(\sum z_{n}\)も収束する。このとき\(\sum z_{n}\)は絶対収束するという。
     <h2>参考文献</h2>
     <ul>
         <li>杉浦光夫「解析入門I」</li>
