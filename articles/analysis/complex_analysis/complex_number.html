@@ -65,7 +65,29 @@
     \begin{equation*}
         |z|^2 = |\bar{z}|^2 = x^2 + y^2 = z \cdot \bar{z}
     \end{equation*}
-
+    したがって
+    \begin{equation*}
+        |zw|^2 = zw\overline{zw} = zw\bar{z}\bar{w} = z \bar{z} w \bar{w} = |z|^2 |w|^2
+    \end{equation*}
+    ゆえに
+    \begin{equation*}
+        |zw| = |z||w|
+    \end{equation*}
+    \(z \neq 0\)ならば、\(|z| > 0\)となるから、\( z\cdot \bar{z}/|z|^2 = 1 \)すなわち\(0\)でない複素数\(z\)は逆数\(1/z = \bar{z}/|z|^2\)をもつ、故に複素数の全体の集合\(\mathbf{C}\)は体をなす、体\(\mathbf{C}\)を<b>複素数体</b>(the field of complex numbers)という。\(z\neq 0\)のとき、\(\overline{(w/z)}\bar{z} = \overline{(w/z)z} = \bar{w}\)であるから、
+    \begin{equation*}
+        \overline{\left( \frac{w}{z} \right)} = \frac{\bar{w}}{\bar{z}}
+    \end{equation*}
+    これと上記の和、差、積の共役に関する法則により、有限個の複素数\(z_{1},z_{2},\cdots ,z_{n}\)から有限回の四則演算によって複素数\(w\)を得たとすれば、\(\bar{z_{1}},\bar{z_{2}},\cdots,\bar{z_{n}}\)から同じ演算を施すことで\(\bar{w}\)を得る。すなわち、対応\(:z\to \bar{z}\)は体\(\mathbf{C}\)から\(\mathbf{C}\)への同型写像(isomorphism)を与える。<br>
+    任意の複素数\(z,w\)に対して三角不等式
+    \begin{equation*}
+        |z + w| \leq |z| + |w|
+    \end{equation*}
+    が成り立つ。<br>
+    \begin{align*}
+        (\because \qquad  |z + w|^2 &= (z + w)(\bar{z} + \bar{w}) = z\bar{z} + z\bar{w} + w\bar{z} + w\bar{w}\\
+        &= |z|^2 + 2\Re (z\bar{w}) + |w|^2 \leq |z|^2 + 2|z\bar{w}| + |w|^2\\
+        &= |z|^2 + 2|z||w| + |w|^2 =  (|z| + |w|)^2
+    \end{align*}
     </div>
     </div>
 </body>
