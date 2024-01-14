@@ -30,7 +30,6 @@
     <div id = ability>
     Pythonは、学校内の授業で基本的な内容を習得しています。<br>
     たとえば、Pythonで<a href = "https://github.com/r12357/home.github.io/tree/main/program_code">双対数を用いた多項式の自動微分の実装(課題05)</a><br>
-    ,<a href = "https://github.com/r12357/home.github.io/tree/main/program_code">N重振り子の実装</a>
     などを作成したことがあります。<br>
     <br>
     HTML/CSSはこのページを作成するぐらいの知識があります。<br>
@@ -43,6 +42,29 @@
     私が作成を担当したのは、画面遷移の実装、リザルト画面の実装、ランキング画面の実装、設定画面の実装。<br>
     <br>
     また、授業でArduinoの基本的なプログラム、実際の電気回路の作成などを扱いました。
+    <br>
+    <br>
+    <br>
+    2023年12月にpythonで<a href = "https://github.com/r12357/home.github.io/tree/main/program_code">N重振り子の実装</a>を行いました。このプログラムは、N重振り子をPythonでシュミレーションを行うものです。具体的には、2重振り子の微分方程式を求めるのと同様に、N個の質点に対して、速度を考えてあげて、オイラーラグランジュの方程式を適応し、微分方程式を得る。その微分方程式に対して、scipyのodeintを用いて差分方程式だと思って、オイラーラグランジュの方程式を数値的に解きそれをmatplotlibで表示するものです。numbaのjitというもので高速化？が行えるようで、貼り付けてみたら64重振り子までの動作は確認しましたが、それ以上は途端に厳しくなるみたいです。
+    <figure>
+        <div style = "text-align: center;">
+            <img src = "program_code/3-pendulum.gif" alt = "3重振り子">
+            <figcaption>3重振り子</figcaption>
+        </div>
+    </figure>
+    <figure>
+        <div style = "text-align: center;">
+            <img src = "program_code/10-pendulum.gif" alt = "10重振り子">
+            <figcaption>10重振り子</figcaption>
+        </div>
+    </figure>
+    <figure>
+        <div style = "text-align: center;">
+            <img src = "program_code/64-pendulum.gif" alt = "64重振り子">
+            <figcaption>64重振り子</figcaption>
+        </div>
+    </figure>
+    
 
     </div>
     </div>
