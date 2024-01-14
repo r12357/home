@@ -184,14 +184,22 @@
     \end{align*}
     問題3.\(f\in \mathbf{R}[X],\zeta \in \mathbf{C}\)に対して\(f(\zeta)=0\)を満たしているとする。このとき\(f(\bar{\zeta})=0\)であることを示せ。(従って\(f(X)\)は\((X - \zeta)(X - \bar{\zeta})\)で割り切れる。)ただし\[A[X]=\left\{\sum_{n = 0}^{m} a_{n}X^{n}\ |\ a_{i} \in A, m\in \mathbf{N}\right\}\quad (X^0 := 1)\]
     <br>
-    問題4.\(f:\mathbf{C} \to M_{2}(\mathbf{R})\)を
+    問題4.次の等式を示せ。
+    \begin{equation*}
+        1 + z + z^2 + \cdots + z^n = \sum_{i = 0}^{n}z^{i} = \frac{1 - z^{n + 1}}{1 - z} \quad (z \neq 1)
+    \end{equation*}
+    (ラグランジュの三角恒等式)
+    \begin{equation*}
+        1 + \cos\theta + \cos2\theta + \cdots + \cos n\theta =\sum_{k = 0}^{n}\cos k\theta = \frac{1}{2} + \frac{\sin \frac{(2n + 1)\theta}{2}}{2\sin \frac{\theta}{2}}
+    \end{equation*}
+    問題5.\(f:\mathbf{C} \to M_{2}(\mathbf{R})\)を
     \begin{array}{rccc}
     f\, :\, &\mathbf{C}                     &\longrightarrow& M_{2}(\mathbf{R})                     \\
             &\cssId{rotatebox}{\in}&               &\cssId{rotatebox}{\in} \\
             &u + iv                     &\longmapsto    &\begin{bmatrix} u & v \\ -v & u\end{bmatrix}
     \end{array}
     として定義すると\(f(z\zeta)=f(z)f(\zeta)\)であることを示せ。ただし\(M_{n}(A)\)は\(A\)の元を行列の要素とする\(n\)次正方行列全体である。(\(\mathbf{C}\cong \text{Im}\ f\))<br>
-    問題5.次の同型が成り立つことを示せ。
+    問題6.次の同型が成り立つことを示せ。
     \begin{equation*}
         \mathbf{C}\cong \mathbf{R}[X]/(X^2 + 1)
     \end{equation*}
