@@ -7,6 +7,9 @@
     <meta name = "viewport" content = "width = device-width">
     <link rel = "stylesheet" href = "../../articles_list.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        #rotatebox{display:inline-block;transform:rotate(-90deg)}
+    </style>
 </head>
 <body class = "article">
     <!-- <div class = container>
@@ -179,6 +182,16 @@
         &(3)\ \Re \left(\sum_{n = 1}^{m} z_{n} \right) = \sum_{n = 1}^{m} \Re z_{n} \quad &(4)&\ \Im \left( \sum_{n = 1}^{m} z_{n} \right) = \sum_{n = 1}^{m} \Im z_{n}\\
         &(5)\ |z| \leq |\Re z| + |\Im z| \leq \sqrt{2}|z|
     \end{align*}
+    問題3.\(f\in \mathbf{R}[X],\zeta \in \mathbf{C}\)に対して\(f(\zeta)=0\)を満たしているとする。このとき\(f(\bar{\zeta})=0\)であることを示せ。ただし\[\mathbf{A}[X]=\left\{\sum_{n = 0}^{m} a_{n}X^{n}\ |\ a_{i} \in A, m\in \mathbf{N}\right\}\quad (X^0 := 1)\]
+    <br>
+    問題4.\(f:\mathbf{C} \to M_{2}(\mathbf{R})\)を
+    \begin{array}{rccc}
+    f\, :\, &\mathbf{C}                     &\longrightarrow& M_{2}(\mathbf{R})                     \\
+            &\cssId{rotatebox}{\in}&               &\cssId{rotatebox}{\in} \\
+            &u + iv                     &\longmapsto    &\begin{bmatrix} u & v \\ -v & u\end{bmatrix}
+    \end{array}
+    として定義すると\(f(z\zeta)=f(z)f(\zeta)\)であることを示せ。ただし\(M_{n}(A)\)は\(A\)の元を行列の要素とする\(n\)次正方行列全体である。
+
     <h2>参考文献</h2>
     <ul>
         <li>[1]杉浦光夫「解析入門I」</li>
@@ -186,6 +199,7 @@
         <li>[3]高木貞二「解析概論」</li>
         <li>[4]エリアス・M・スタイン、ラミ・シャカルチ「複素解析」</li>
         <li>[5]雪江明彦「環と体とガロア理論」</li>
+        <li>[6]佐武一郎「線型代数学」</li>
     </ul>
     </div>
     </div>
