@@ -107,6 +107,7 @@
         &|a_{0} + a_{1}z + a_{2}z^{2} + \cdots + a_{n}z^{n}| \\
         &\qquad \leq |a_{0}| + |a_{1}||z| + |a_{2}||z|^{2} + \cdots + |a_{n}||z|^{n}
     \end{align*}
+    <div class = "center">
     <div class = "thm">
         (Cauchyの判定法) <br>
         複素数列\(\{z_{n}\}\)が収束するための必要十分条件は、任意の正の実数\(\varepsilon\)に対してある自然数\(n_{0}\)が存在して
@@ -115,6 +116,7 @@
         \end{equation*}
         となるようにできることである。
     </div><br>
+    </div>
     これは、すなわち点列の収束に関するCauchyの判定法に他ならない。<br>
     \(||z_{n}| - |w|| \leq |z_{n} - w|\)より\(\lim z_{n} = w\)ならば\(\lim |z_{n}| = |w|\)となる。すなわち、複素数列\(\{z_{n}\}\)が収束するならば\(\{|z_{n}|\}\)も収束して
     \begin{equation*}
@@ -164,7 +166,19 @@
     したがって
     \begin{equation*}
         S = \lim_{n \to \infty}S_{n} = \lim_{n \to \infty}Z_{n}^1Z_{n}^2 = w\omega
-    \end{equation*} 
+    \end{equation*}
+    <h2>演習問題</h2>
+    問題1.けいさんせよ。
+    \begin{align*}
+        &(1)\ (2 - i) - i(1 - 2i) \quad &(2)&\ (2 - 3i)(-2 + i)\\
+        &(3)\ \frac{5i}{(1 - i)(2 - i)(3 - i)} \quad &(4)&\ 2i -\frac{\overline{2 - 4i}}{2}
+    \end{align*}
+    問題2.示せ。
+    \begin{align*}
+        &(1)\ \Re (iz) = -\Im z \quad &(2)&\ \Im (iz) = \Re z\\
+        &(3)\ \Re \left(\sum_{n = 1}^{m} z_{n} \right) = \sum_{n = 1}^{m} \Re z_{n} \quad &(4)&\ \Im \left( \sum_{n = 1}^{m} z_{n} \right) = \sum_{n = 1}^{m} \Im z_{n}\\
+        &(5)\ |z| \leq |\Re z| + |\Im z| \leq \sqrt{2}|z|
+    \end{align*}
     <h2>参考文献</h2>
     <ul>
         <li>[1]杉浦光夫「解析入門I」</li>

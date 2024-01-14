@@ -47,6 +47,11 @@ html {
     border-bottom: solid 5px #5989cf;
 }
 
+.center {
+    text-align: center;
+}
+
+
 .prop {
     text-align: left;
     display: inline-block;
