@@ -48,6 +48,7 @@
         ここで、\(U\)が弧状連結とは、任意の\(z,w \in U\)に対して、\(\gamma : [0,1] \to \mathbf{C}\)が連続で\(\gamma(0) = z,\ \gamma(1) = w\)を満たす\(\gamma\)が存在することである。<br>
         <font size = "4.5">Remark</font><br>
         この\(\gamma\)の定義域を\([a,b]\subset \mathbf{R}\)としてもよい。実際\(\alpha :[0,1] \to [a,b]\)を\(\alpha(t) = at + b(1 - t)\)とすればこれは全単射である。<br>
+        連結な開集合を<b>領域</b>(region)といい、領域の閉包を<b>閉領域</b>(closed region)という。<br>
         <div class = "center">
         <div class = "thm">
             <font size = "5">定理3</font><br>
@@ -64,6 +65,51 @@
         \begin{equation*}
             u(x,y):= \Re f(x + iy),\qquad v(x,y):= \Im f(x + iy)
         \end{equation*}
+        で定まる実関数\(u,v\)を考えることがある。ここでは\(u,v\)を\(f\)の実部、虚部と呼ぶことにする。<br>
+        <h2>極限と連続性</h2><br>
+        \(D \subset \mathbf{C},\ c\in \overline{D},\ \gamma \in \mathbf{C}\)とする。任意の正の実数\(\varepsilon\)に対してある正の実数\(\delta\)があって
+        \begin{equation*}
+            0 < |z - c| < \delta \Rightarrow |f(z) - \gamma| < \varepsilon
+        \end{equation*}
+        となるようにできるならば、\(z \to c\)のとき\(f(z)\)は\(\gamma\)に収束するという。また\(\gamma\)は\(z \to c\)のときの\(f(z)\)の極限ともいい
+        \begin{equation*}
+            \lim_{z \to c} f(z) = \gamma
+        \end{equation*}
+        あるいは
+        \begin{equation*}
+            z \to c\ のとき\ f(z) \to \gamma
+        \end{equation*}
+        とかく。\(z \to c\)のとき\(f(z) \to \gamma \)となるための必要十分条件は\(z_{n} \to z\)なる任意の\(D\)上の複素数列\(\{z_{n}\},\ z_{n} \neq c\)に対し複素数列\(\{f(z_{n})\}\)が\(\gamma\)に収束することである。証明は実関数の場合と同様。この事実から明らかなように次が成り立つ<br>
+        <div class = "center">
+        <div class = "thm">
+            <font size = "5">定理4(Cauchyの判定法)</font><br>
+            \(f: \Omega \subset \to \mathbf{C},\ c\in \overline{\Omega}\)とする。\(z \to c\)のとき\(f(z)\)が収束するための必要十分条件は、任意の正の実数\(\varepsilon\)に対して、ある正の実数\(\delta\)が存在して
+            \begin{equation*}
+                0 < |z - c| < \delta,\ 0 < |w - c| < \delta \Rightarrow | f(z) - f(w)| < \varepsilon
+            \end{equation*}
+            となることである。
+        </div>
+        </div><br>
+        \(f:\Omega \to \mathbf{C},\ c \in \Omega\)とする。このとき
+        \begin{equation*}
+            \lim_{z \to c}f(z) = f(\lim_{z \to c} z) = f(c)\ \cdots \ (*)
+        \end{equation*}
+        ならば、\(f\)は\(c\)で<b>連続</b>であるという。極限の定義で言えば、任意の正の実数\(\varepsilon\)に対してある正の実数\(\delta\)が存在して
+        \begin{equation*}
+            0 < |z - c| < \delta \Rightarrow |f(z) - f(c)| < \varepsilon
+        \end{equation*}
+        となることである。<br>
+        <font size = "4.5">Remark</font><br>
+        \(c \in \Omega\)であるので定義域に属する点に対して連続の概念が定義される。たまに\(f(z) = 1/z\)が\(z = 0\)で不連続である。とか言われるが嘘である。<br>
+        \(f\)を実部\(u\)と虚部\(v\)に分けて考えると
+        \begin{equation*}
+            |f(z) - f(c)| = \sqrt{|u(x,y) - u(a,b)|^2 + |v(x,y) - v(a,b)|^2}
+        \end{equation*}
+        となるから、\((*)\)は
+        \begin{equation*}
+            \lim_{(x,y) \to (a,b)}u(x,y) = u(a,b),\quad \lim_{(x,y) \to (a,b)} v(x,y) = v(a,b)
+        \end{equation*}
+        と同値である。
     </div>
     </div>
 </body>
