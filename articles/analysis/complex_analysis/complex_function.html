@@ -28,14 +28,42 @@
         \end{equation*}
         とおく。特に\(D_{1}(0)\)を<b>単位円板</b>(unit disc)と呼び、\(\mathbf{D}\)で表す。<br>
         \(\Omega \subset \mathbf{C}\)に対して、\(z \in \Omega\)が\(\Omega\)の内点(interior point)であるとはある\(r > 0\)に対して\(D_{r}(z) \subset \Omega\)となることである。\(\Omega\)の内点全体の集合を\(\Omega\)の内部(interior)といい\(\Omega^{i}\)で表す。\(\Omega = \Omega^{i}\)となるとき\(\Omega\)を<b>開集合</b>(open set)であるという。<br>
-        \(\Omega \subset \mathbf{C}\)に対して、\(z \in \mathbf{C}\)が集積点(accumulation point)(または極限点(limit point))であるとは、ある\(z_{1},z_{2},\cdots \in \Omega\)に対して\(\lim z_{n} = z\)となることである。\(\Omega\)の集積点の全体の集合を、\(\Omega\)の閉包(closure)という。\(\Omega\)の閉包を\(\overline{\Omega}\)で表す。\(\Omega = \overline{\Omega}\)のとき\(\Omega\)<b>閉集合</b>(closed set)であるという。\(\overline{\Omega} \setminus \Omega^{i}\)を\(\Omega\)の境界(boundary)といい、\(\partial \Omega\)とかく。
+        \(\Omega \subset \mathbf{C}\)に対して、\(z \in \mathbf{C}\)が集積点(accumulation point)(または極限点(limit point))であるとは、ある\(z_{1},z_{2},\cdots \in \Omega\)に対して\(\lim z_{n} = z\)となることである。\(\Omega\)の集積点の全体の集合を、\(\Omega\)の閉包(closure)という。\(\Omega\)の閉包を\(\overline{\Omega}\)で表す。\(\Omega = \overline{\Omega}\)のとき\(\Omega\)は<b>閉集合</b>(closed set)であるという。\(\overline{\Omega} \setminus \Omega^{i}\)を\(\Omega\)の境界(boundary)といい、\(\partial \Omega\)とかく。
         \begin{equation*}
             \Omega が開集合\Leftrightarrow \mathbf{C}\setminus \Omega が開集合
         \end{equation*}
+        \(\Omega \subset \mathbf{C}\)が有界(bounded)であるとは、ある\(r > 0\)に対して\(\Omega \subset D_{r}(0)\)となることである。また、\(\Omega\)が有界かつ閉のとき\(\Omega\)は<b>コンパクト</b>(compact)であるという。<br>
+        証明はしないが次が成り立つ。
+        <div class = "center">
+        <div class = "thm">
+            <font size = "5">定理2</font><br>
+            次の3つは同値である。<br>
+            (1)\(\Omega\)はコンパクト<br>
+            (2)\(\Omega\)の任意の開被覆に対して、有限個の部分被覆で\(\Omega\)を覆うことができる。<br>
+            (3)任意の\(z_{1},z_{2},\cdots \in \Omega\)に対して\(\Omega\)の点に収束するような部分列が存在する。
+        </div>
+        </div>
         複素平面上の開集合\(U\)が任意の空でない開集合\(V,W \subset U,\ V \cap W = \varnothing\)に対して\(U = V \cup W\)と<b>できない</b>とき\(U\)は<b>連結</b>(connected)であるという。(直感的には開集合で分離できない。つまり、繋がっている)<br>
         開集合\(U\)が連結であることと弧状連結であることは同値である。<br>
-        ここで、弧状連結とは、
-        
+        ここで、\(U\)が弧状連結とは、任意の\(z,w \in U\)に対して、\(\gamma : [0,1] \to \mathbf{C}\)が連続で\(\gamma(0) = z,\ \gamma(1) = w\)を満たす\(\gamma\)が存在することである。<br>
+        <font size = "4.5">Remark</font><br>
+        この\(\gamma\)の定義域を\([a,b]\subset \mathbf{R}\)としてもよい。実際\(\alpha :[0,1] \to [a,b]\)を\(\alpha(t) = at + b(1 - t)\)とすればこれは全単射である。<br>
+        <div class = "center">
+        <div class = "thm">
+            <font size = "5">定理3</font><br>
+            \(\Omega \subset \mathbf{C}\)を開集合とする。このとき、
+            \begin{equation*}
+                \Omega が連結 \Leftrightarrow \Omega が弧状連結
+            \end{equation*}
+        </div>
+        </div>
+        証明は気が向いたら書く。(<a href = "https://www-an.acs.i.kyoto-u.ac.jp/~kigami/complex1.pdf">このpdf</a>に載っている。)<br>
+        次にやっと複素関数について述べる。<br>
+        \(\Omega \subset \mathbf{C}\)を定義域とする、複素数値関数\(f : \Omega \to \mathbf{C}\)のことを<b>複素関数</b>という。<br>
+        複素関数\(f: \Omega \to \mathbf{C}\)が与えられたとき、
+        \begin{equation*}
+            u(x,y):= \Re f(x + iy),\qquad v(x,y):= \Im f(x + iy)
+        \end{equation*}
     </div>
     </div>
 </body>
