@@ -121,7 +121,7 @@
         したがって、\(f,g\)が連続関数ならばその一次結合\(af + bg\)およびその積\(fg\)も連続関数である。さらに、\(\Omega\)上でつねに\(g \neq 0\)なら\(f/g\)も連続関数である。また、合成関数も連続となる。<br>
         \(f(z)\)を\(D\subset \mathbf{C}\)で定義された複素関数とする。任意の正の実数\(\varepsilon\)に対して、ある正の実数\(\delta\)が存在して
         \begin{equation*}
-            z,w\in D,|z-w| < \delta \Rightarrow |f(z)-f(w)| < \varepsilon
+            z,w\in D,\ |z-w| < \delta \Rightarrow |f(z)-f(w)| < \varepsilon
         \end{equation*}
         となるとき、\(f\)は\(D\)上で一様連続であるという。
         <div class = "center">
@@ -130,6 +130,23 @@
             有界な閉集合\(D\subset \mathbf{C}\)で定義された複素連続関数\(f\)は\(D\)で一様連続である。
         </div>
         </div>
+        \(f\)が\(D\)上で一様連続でなかったとすれば、ある正の実数\(\varepsilon\)に対してどんな正の実数\(\delta\)をとっても
+        \begin{equation*}
+            z,w \in D,\ [\ |z-w| < \delta \ ] \  \land \ [\ |f(z)-f(w)| \geq \varepsilon \ ] \ \cdots \ (*)
+        \end{equation*}
+        となる。ゆえに自然数\(n\)に対して
+        \begin{equation*}
+            z_{n},w_{n} \in D,\ [\ |z_{n} - w_{n}| < \frac{1}{n} \ ]\ \land \ [\ |f(z_{n}) - f(w_{n})| \geq \varepsilon \ ]
+        \end{equation*}
+        となる複素数\(z_{n},w_{n}\)が存在する。そして更にこれらは収束列としてもよい。(収束列としない場合はBolzano-Weierstrassの定理より収束部分列を考えるといい。結局変わらないのだが、、)\(\{z_{n}\}\)の極限を\(\displaystyle c = \lim_{n \to \infty} z_{n}\)とすると
+        \begin{equation*}
+            |z_{n} - w_{n}| < \frac{1}{n} \to 0 \quad (n \to \infty)
+        \end{equation*}
+        より\(\displaystyle \lim_{n \to \infty}z_{n} = \lim_{n \to \infty}w_{n} = c\)である。したがって\(f\)の連続性により
+        \begin{equation*}
+            \lim_{n \to \infty}f(z_{n}) = \lim_{n \to \infty}f(w_{n}) = f(c)
+        \end{equation*}
+        となるがこれは\( (*) \)に矛盾する。ゆえに\(f\)は\(D\)上で一様連続である。
     </div>
     </div>
 </body>
