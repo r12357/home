@@ -1,73 +1,113 @@
 <!DOCTYPE html>
-<html lang = "ja">
+<html lang="ja">
 
 <head>
     <title>home</title>
     <meta charset="utf-8">
-    <meta name = "viewport" content = "width = device-width">
-    <link rel = "stylesheet" href = "main.css">
+    <meta name="viewport" content="width = device-width">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 
 <body>
-    <h1 id = title>高専2年生のFefrです。</h1>
-    <div id = jikosyoukai>
-        <h2 class = h2>自己紹介</h2>
+    <h1 id=title>高専2年生のFefrです。</h1>
+    <div id=jikosyoukai>
+        <h2 class=h2>自己紹介</h2>
         <p>
             ひろく興味を持っていますが、おもに代数幾何に興味があります<br>
-            いまは、<a href = "https://www.shokabo.co.jp/mybooks/ISBN978-4-7853-1586-3.htm" target = "_blank">Tu多様体</a>を読んでいます。<br>
+            いまは、<a href="https://www.shokabo.co.jp/mybooks/ISBN978-4-7853-1586-3.htm"
+                target="_blank">Tu多様体</a>を読んでいます。<br>
             mathlogとここにて記事をすこし書いています。
         </p>
     </div>
-    <div class = "container">
-        <div class = "item"><a href = "hobby.html">趣味紹介</a></div>
-        <div class = "item"><a href = "articles/articles_list.html">数学の記事</a></div>
-        <div class = "item"><a href = "#">数学の小話</a></div>
-        <div class = "item"><a href = "https://mathlog.info/users/9teIyzLgfkfYyu7ZU8P7o0WlPED2" target = "_blank">mathlogへ</a></div>
+    <div class="container">
+        <div class="item"><a href="hobby.html">趣味紹介</a></div>
+        <div class="item"><a href="articles/articles_list.html">数学の記事</a></div>
+        <div class="item"><a href="#">数学の小話</a></div>
+        <div class="item"><a href="https://mathlog.info/users/9teIyzLgfkfYyu7ZU8P7o0WlPED2" target="_blank">mathlogへ</a>
+        </div>
     </div>
-    
-    <h2 class = h2>できること</h2>
-    <div class = maintext>
-    <div id = ability>
-    Pythonは、学校内の授業で基本的な内容を習得しています。<br>
-    たとえば、Pythonで<a href = "https://github.com/r12357/home.github.io/tree/main/program_code">双対数を用いた多項式の自動微分の実装(課題05)</a><br>
-    などを作成したことがあります。<br>
-    <br>
-    HTML/CSSはこのページを作成するぐらいの知識があります。<br>
-    <br>
-    GitHubは高専祭展示のためのゲーム開発にてチーム開発を行える程度に
-    扱うことができます。<br>
-    <br>
-    C++はPython程度に扱うことができ、高専祭展示のオセロゲームはC++で作成しました。<br>
-    <a href = "https://drive.google.com/drive/folders/1Leb1pUP40ab8iWMHb0EVEGdGwBmqF4tM?usp=sharing">高専祭で作成したプログラム</a><br>
-    私が作成を担当したのは、画面遷移の実装、リザルト画面の実装、ランキング画面の実装、設定画面の実装。<br>
-    <br>
-    また、授業でArduinoの基本的なプログラム、実際の電気回路の作成などを扱いました。
-    <br>
-    <br>
-    <br>
-    2023年12月にpythonで<a href = "https://github.com/r12357/home.github.io/tree/main/program_code">N重振り子の実装</a>を行いました。このプログラムは、N重振り子をPythonでシュミレーションを行うものです。具体的には、2重振り子の微分方程式を求めるのと同様に、N個の質点に対して、速度を考えてあげて、オイラーラグランジュの方程式を適応し、微分方程式を得る。その微分方程式に対して、scipyのodeintを用いて差分方程式だと思って、オイラーラグランジュの方程式を数値的に解きそれをmatplotlibで表示するものです。numbaのjitというもので高速化？が行えるようで、貼り付けてみたら64重振り子までの動作は確認しましたが、それ以上は途端に厳しくなるみたいです。
-    <figure>
-        <div style = "text-align: center;">
-            <img src = "program_code/3-pendulum.gif" alt = "3重振り子">
-            <figcaption>3重振り子</figcaption>
-        </div>
-    </figure>
-    <figure>
-        <div style = "text-align: center;">
-            <img src = "program_code/10-pendulum.gif" alt = "10重振り子">
-            <figcaption>10重振り子</figcaption>
-        </div>
-    </figure>
-    <figure>
-        <div style = "text-align: center;">
-            <img src = "program_code/64-pendulum.gif" alt = "64重振り子">
-            <figcaption>64重振り子</figcaption>
-        </div>
-    </figure>
-    
 
-    </div>
+    <h2 class=h2>できること</h2>
+    <div class=maintext>
+        <div id=ability>
+            Pythonは、学校内の授業で基本的な内容を習得しています。<br>
+            たとえば、Pythonで<a
+                href="https://github.com/r12357/home.github.io/tree/main/program_code">双対数を用いた多項式の自動微分の実装(課題05)</a><br>
+            などを作成したことがあります。<br>
+            <br>
+            HTML/CSSはこのページを作成するぐらいの知識があります。<br>
+            <br>
+            GitHubは高専祭展示のためのゲーム開発にてチーム開発を行える程度に
+            扱うことができます。<br>
+            <br>
+            C++はPython程度に扱うことができ、高専祭展示のオセロゲームはC++で作成しました。<br>
+            <a
+                href="https://drive.google.com/drive/folders/1Leb1pUP40ab8iWMHb0EVEGdGwBmqF4tM?usp=sharing">高専祭で作成したプログラム</a><br>
+            私が作成を担当したのは、画面遷移の実装、リザルト画面の実装、ランキング画面の実装、設定画面の実装。<br>
+            <br>
+            また、授業でArduinoの基本的なプログラム、実際の電気回路の作成などを扱いました。
+            <br>
+            <br>
+            <br>
+            2023年12月にpythonで<a
+                href="https://github.com/r12357/home.github.io/tree/main/program_code">N重振り子の実装</a>を行いました。
+            このプログラムは、N重振り子をPythonでシュミレーションを行うものです。具体的には、2重振り子の微分方程式を求めるのと同様に、
+            N個の質点に対して、速度を考えてあげて、オイラーラグランジュの方程式を適応し、微分方程式を得る。
+            その微分方程式に対して、scipyのodeintを用いて差分方程式だと思って、オイラーラグランジュの方程式を数値的に解きそれをmatplotlibで表示するものです。
+            numbaのjitというもので高速化？が行えるようで、貼り付けてみたら64重振り子までの動作は確認しましたが、それ以上は途端に厳しくなるみたいです。
+            <figure>
+                <div style="text-align: center;">
+                    <img src="program_code/3-pendulum.gif" alt="3重振り子">
+                    <figcaption>3重振り子</figcaption>
+                </div>
+            </figure>
+            <figure>
+                <div style="text-align: center;">
+                    <img src="program_code/10-pendulum.gif" alt="10重振り子">
+                    <figcaption>10重振り子</figcaption>
+                </div>
+            </figure>
+            <figure>
+                <div style="text-align: center;">
+                    <img src="program_code/64-pendulum.gif" alt="64重振り子">
+                    <figcaption>64重振り子</figcaption>
+                </div>
+            </figure>
+            2024年2月にpythonで制作時間は約8時間で
+            <a href="https://github.com/pi826/kadai09">シャッフルパズル</a>を作成しました。
+            このプログラムは、好きな画像でシャッフルパズルをすることができるプログラムです。具体的には、
+            実行すると、メインウィンドウが起動して、以下のようなメニュー画面が出てきます。
+            <figure>
+                <div style="text-align: center;">
+                    <img src="figure/2024_02_python/menu.png" alt="メニュー画面">
+                    <figcaption>メニュー画面</figcaption>
+                </div>
+            </figure>
+            文字通り「おわり」は終了ボタンです。「画像を選択」を押すと。画像を選択することができます。
+            このとき好きな画像で構わないですが、縦長の画像すぎる画像は気をつけてください。
+            また、画像のパスに日本語が含まれるとパスが文字化けし、画像を読み込むことができないので
+            読みパスがアルファベットであること、またファイル名がアルファベットであることに注意してください。<br>
+            画像を読み込むと以下のようになります。(以下の画像はImage Creator from Designerで作成した。)
+            <!-- ちなみに、「りんごの浮世絵」と打った。 -->
+            <figure>
+                <div style="text-align: center;">
+                    <img src="figure/2024_02_python/ring_ukiyoe.jpg">
+                    <figcaption>元画像</figcaption>
+                </div>
+            </figure>
+            <figure>
+                <div style="text-align: center;">
+                    <img src="figure/2024_02_python/jikkougo1.png">
+                    <figcaption>画像読み込み後</figcaption>
+                </div>
+            </figure>
+            「もどる」ボタンを押すと最初のメニュー画面に戻ります。<br>
+            さて、操作方法は、正方形分割された画像の黒でない正方形をダブルクリックすると、
+            ダブルクリックした正方形と黒の正方形が入れ替わります。元の画像に戻すことが目標のゲームです。
+
+
+        </div>
     </div>
 
 
