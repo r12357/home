@@ -1,6 +1,24 @@
 body {
     background-color:gainsboro;
+    font-size: 16px;
 }
+
+.main {
+    text-align: center;
+    
+}
+
+@media screen and (max-width: 601px) {
+    body {
+        font-size: 18px;
+    }
+
+    .main {
+        max-width: 100%;
+    }
+}
+
+
 
 .article {
     font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
@@ -32,9 +50,7 @@ html {
     height: auto;
 }
 
-.main {
-    text-align: center;
-}
+
 
 .thm {
     text-align: left;

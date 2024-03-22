@@ -4,9 +4,23 @@
 <head>
     <title>複素数</title>
     <meta charset="utf-8">
-    <meta name = "viewport" content = "width = device-width">
+    <meta name = "viewport" content = "width = device-width , initial-scale = 1.0">
     <link rel = "stylesheet" href = "../../articles_list.css">
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+        <!-- MathJaxの設定 -->
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              CommonHTML: { scale: 100 },
+              "HTML-CSS": { scale: 100 },
+              SVG: { scale: 100 },
+              NativeMML: { scale: 100 },
+              TeX: { equationNumbers: { autoNumber: "AMS" } }
+            });
+          </script>
+      
     <style>
         #rotatebox{display:inline-block;transform:rotate(-90deg)}
     </style>
