@@ -1,9 +1,72 @@
 <!DOCTYPE html>
-
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Forward Euler Method</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
 <body>
-<code style="display: inline-block;white-space: normal;max-width:100%; word-break:break-all; word-wrap:break-word;">
-    anyyyyyyyylonnnnnngggggggggstringggggggggwillllbetrunnncateeeeeddddddd
-</code>
 
+<canvas id="myChart" width="600" height="400"></canvas>
+ここは入力できるんですか？
+<script>
+  // オイラー法を用いてdy/dt = kyを数値的に解く関数
+  function eulerMethod(k, y0, t0, dt, tMax) {
+    let t = t0;
+    let y = y0;
+    const data = [{x: t, y: y}];
+    
+    while (t <= tMax) {
+      y = y + dt * k * y;  // オイラー法の更新式
+      t = t + dt;
+      data.push({x: t, y: y});
+    }
+    
+    return data;
+  }
+
+  // パラメータ
+  const k = 0.1;   // 係数k
+  const y0 = 1;    // 初期条件y(0) = y0
+  const t0 = 0;    // 開始時間
+  const dt = 0.1;  // 時間刻み
+  const tMax = 10; // 最大時間
+
+  // オイラー法でデータを生成
+  const eulerData = eulerMethod(k, y0, t0, dt, tMax);
+
+  // Chart.jsを使ってグラフを描画
+  const ctx = document.getElementById('myChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      datasets: [{
+        label: 'dy/dt = ky (Euler Method)',
+        data: eulerData,
+        borderColor: 'blue',
+        fill: false,
+      }]
+    },
+    options: {
+      scales: {
+        x: {
+          type: 'linear',
+          position: 'bottom',
+          title: {
+            display: true,
+            text: 'Time (t)'
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: 'y(t)'
+          }
+        }
+      }
+    }
+  });
+</script>
 
 </body>
+</html>

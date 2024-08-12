@@ -41,26 +41,119 @@ function calculate0() {
     }
 }
 
-console.log("Hello JavaScript!!");
-
-console.log("Hello")
-console.log("World!")
-
-let x;
-x = "message";
-console.log(x);
 
 
-let a = "b";
 
-let cc = a;
+// グローバルスコープでチャートインスタンスを追跡する変数
+let chartInstance = null;
 
-cc = "a";
-const math = "good";
-let score = 100;
-let akaten = (score < 60) ? "赤点だよ" : "提出物だしてる？";
+function problem0() {
+    // オイラー法を用いてdy/dt = kyを数値的に解く関数
+    function eulerMethod(k, y0, t0, dt, tMax) {
+        let t = t0;
+        let y = y0;
+        const data = [{x: t, y: y}];
+        
+        while (t <= tMax) {
+            y = y + dt * k * y;  // オイラー法の更新式
+            t = t + dt;
+            data.push({x: t, y: y});
+        }
+        
+        return data;
+    }
 
-let n = "not a number" * 1;
-for (let i = 0; i < 10; i++){
-    console.log(i);
+    // 正確な解を計算する関数
+    function solved_0(k, t0, dt, tMax) {
+        let t = t0;
+        let y = 1;
+        const data = [{x: t, y: y}];
+    
+        while (t <= tMax) {
+            y = Math.exp(k * t);
+            t = t + dt;
+            data.push({x: t, y: y});
+        }
+    
+        return data;
+    }
+
+    // パラメータを取得
+    let k = parseFloat(document.getElementById("problem0_k").value);   // 係数k
+    const y0 = 1;    // 初期条件y(0) = y0
+    const t0 = 0;    // 開始時間
+    let dt = parseFloat(document.getElementById("problem0_dt").value);  // 時間刻み
+    const tMax = 10; // 最大時間
+
+    // 入力の検証
+    if (isNaN(k) || isNaN(dt)) {
+        alert("数値を入力してください．");
+        return;
+    }
+
+    // オイラー法でデータを生成
+    const eulerData = eulerMethod(k, y0, t0, dt, tMax);
+    const solved_0Data = solved_0(k, t0, dt, tMax);
+
+    // キャンバスの取得
+    let canvasParent = document.getElementById("canvasParent");
+    let canvas = document.getElementById("canvas");
+
+    let resize = () => {
+        // 既存のチャートがあれば破棄する
+        if (chartInstance) {
+            chartInstance.destroy();
+        }
+
+        // キャンバスのサイズを親要素に合わせて変更
+        canvas.width = canvasParent.clientWidth;
+        canvas.height = canvasParent.clientHeight;
+
+        // 新しいチャートを作成
+        const ctx = canvas.getContext('2d');
+        chartInstance = new Chart(ctx, {
+            type: 'line',
+            data: {
+                datasets: [
+                    {
+                        label: 'dy/dt = ky (Euler Method)',
+                        data: eulerData,
+                        borderColor: 'blue',
+                        fill: false,
+                    },
+                    {
+                        label: "y = e^(kt)",
+                        data: solved_0Data,
+                        borderColor: "red",
+                        fill: false,
+                    }
+                ]
+            },
+            options: {
+                animation: false,  // アニメーションを無効にする
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom',
+                        title: {
+                            display: true,
+                            text: 'Time (t)'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'y(t)'
+                        }
+                    }
+                }
+            }
+        });
+    };
+
+    // 初回の描画
+    resize();
+
+    // ウィンドウのリサイズイベントにリスナーを追加して、リサイズ時にグラフを再描画
+    window.addEventListener('resize', resize);
 }

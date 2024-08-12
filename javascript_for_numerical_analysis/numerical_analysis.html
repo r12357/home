@@ -2,11 +2,15 @@
 <html lang="ja">
 
 <head>
-    <title>home</title>
+    <title>JavaScriptで数値解析</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width = device-width">
     <link rel="stylesheet" href="../main.css">
-    <script src = "numerical_analysis.js"></script>
+
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class = "article">
@@ -271,10 +275,71 @@ for (let i = 0; i &lt; 20; i++) {
 */
         </code>
     </pre>
+    次に，関数について説明しよう．<br>
+    関数は次のように作成する．
+    <pre>
+        <code>
+function function_name(argument1, argument2,...) {
+    // 処理を書く
+    return return_value;
+}
+        </code>
+    </pre>
+    returnや引数は省略することが出来る．
+    <pre>
+        <code>
+function greet(name) {
+    return "Hello, " + name + "!";
+}
 
+console.log(greet("Alice")); // "Hello, Alice!"
+        </code>
+    </pre>
+    関数内で宣言された変数は，関数内でのみ参照可能です．
+    また，関数の外にある変数を参照することができ，更に変更することも出来ます．
+    <pre>
+        <code>
+let number = 666;
 
+function hoge() {
+    number = 10;
+}
+
+console.log(number); // 666
+
+hoge();
+
+console.log(number); // 10
+        </code>
+    </pre>
+    次にJavaScriptを用いて数値解析を行ってみよう．最初に
+    次の微分方程式を考えてみよう．
+    <div class = "formula">
+        \[ \frac{\text{d}y}{\text{d}t} = ky \]
+    </div>
+    これは指数関数的な成長などを表す基本的な方程式である．これ自体は
+    簡単に解ける微分方程式である．実際\(y(0) = 1\)とすると
+    <div class = "formula">
+        \[ y(t) = e^{kt} \]
+    </div>
+    となる．<br>
+    <label for="number1">\(k\):</label>
+    <input type="number" id="problem0_k" value = "0.1" placeholder="数値を入力">
+    <br>
+    <label for="number2">\(dt\):</label>
+    <input type="number" id="problem0_dt" min = "0" max = "10" value = "0.1" placeholder="数値を入力">
+    \( 0 &lt; dt &lt; 10\)
+    <br>
+    <button onclick="problem0()">グラフをプロットする</button>
+    
+    <div class="canvas-parent" id="canvasParent">
+        <canvas id="canvas"></canvas>
+    </div>
+    次に
+    
 </div>
 </div>
+<script src = "numerical_analysis.js"></script>
 </body>
 
 </html>
