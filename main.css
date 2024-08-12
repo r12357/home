@@ -57,3 +57,21 @@ a:link{
 a:visited{
     color:blue;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+pre {
+    padding: 1em;/* 内側の余白 */
+    margin: 1.5em;/* 外側の余白 */
+}
+code {
+    display: inline-block;
+    white-space: pre-line;
+    max-width:90%; 
+    word-break:break-all; 
+    word-wrap:break-word;
+}

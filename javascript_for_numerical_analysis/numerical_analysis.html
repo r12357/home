@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width">
+    <link rel="stylesheet" href="../main.css">
+    <script src = "numerical_analysis.js"></script>
+</head>
+
+<body class = "article">
+    <h1 id = "title">JavaScriptで数値解析</h1>
+<div class="main">
+<div class = "left">
+    JavaScriptの簡単な入門と，JavaScriptを用いた簡単な数値解析を行う．
+まず，定番の「Hello World」は以下をJsファイルに書くことで実行できる．
+    <pre>
+        <code>
+console.log("Hello World!");
+        </code>
+    </pre>
+    console.logなのでコンソールに出力されるのですが，コンソールはウェブページ上で
+    開発者モードを開くとコンソールタブがあるので，そちらで確認できる．<br><br>
+    行の終わりにはセミコロンが必要だが，殆どの場合改行がセミコロンをを意味するので
+    次のようなコードでもエラーが出ることはない．
+    <pre>
+        <code>
+console.log("Hello")
+console.log("World!")
+        </code>
+    </pre>
+    しかし，次の場合は改行がセミコロンを意味しない．
+    <pre>
+        <code>
+console.log(1 + 
+    2 +
+    3);
+        </code>
+    </pre>
+    しかし，普通はセミコロンはつけるものである．<br><br>
+    コメントはスラッシュ2つである．
+    <pre>
+        <code>
+// この行はコメントになる．
+
+console.log("hoge"); // hogeがコンソールに出力される．
+        </code>
+    </pre>
+    複数行のコメントは/*で始まり，*/で終わる．
+    <pre>
+        <code>
+/*
+コメントだお
+いっぱいコメント
+たくさんのコメント
+数え切れないコメント
+*/
+        </code>
+    </pre>
+    変数を宣言するには以下のようにします．
+    <pre>
+        <code>
+let message;
+        </code>
+    </pre>
+    =を用いてデータを代入することが出来ます．
+    <pre>
+        <code>
+let message;
+
+message = "Hello";
+        </code>
+    </pre>
+    あなたが期待するように以下のようにも入力できます．
+    <pre>
+        <code>
+let message = "Hello";
+
+let name = "Jesus", age = "2024", message = "true love";
+        </code>
+    </pre>
+    letは再宣言が不可能である．つまり
+    <pre>
+        <code>
+let where = "do we come from?";
+let what = "are we?";
+let where = "are we going?";
+        </code>
+    </pre>
+    とすると，
+    <pre>
+        <code>
+SyntaxError: Identifier 'where' has already been declared
+        </code>
+    </pre>
+    というエラーがでる．<br>
+    letの他にvarというものがあり，letとほとんど同じ動作をする．
+    <pre>
+        <code>
+var message;
+        </code>
+    </pre>
+    しかし，大きな違いとして，再宣言が可能である．
+    <pre>
+        <code>
+var where = "do we come from?";
+var what = "are we?";
+var where = "are we going?";
+        </code>
+    </pre>
+    としても問題ないのである．
+    個人的にはバグを引き起こすことになり得るので非推奨である．<br>
+    定数を宣言するには，letの代わりにconstを用います．
+    <pre>
+        <code>
+const math = "good";
+const level = "9999";
+        </code>
+    </pre>
+
+
+
+</div>
+</div>
+</body>
+
+</html>

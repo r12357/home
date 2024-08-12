@@ -215,3 +215,8 @@ h1 {
     background: #b63b4d;
     color: #FFF;
 }
+
+code {
+    word-wrap: break-word; /* 長い単語を改行して表示 */
+    word-break: break-all; /* 必要に応じてどこでも改行 */
+}
