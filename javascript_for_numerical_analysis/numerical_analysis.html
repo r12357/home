@@ -118,7 +118,159 @@ const math = "good";
 const level = "9999";
         </code>
     </pre>
+    さて次に，データ型について解説しよう．<br>
+    今まで変数を宣言する際にデータ型は明記されていなかった．
+    <pre>
+        <code>
+// エラーなし
+let message = "hello";
+message = 999999;
+        </code>
+    </pre>
+    つまり，JavaScriptは動的型付けなのである．<br>
+    数値の演算は以下のように行うことが出来る．
+    <pre>
+        <code>
+let n = 2 * 4; // n = 8
+let n = 10 / 2; // n = 5
+let n = 1 / 3; // n = 0.3333333333333333
+let n = 1 / 0; // n = Infinity
+let n = -1 / 0; // n = -Infinity
+let n = "not a number" / 1; // n = NaN
+        </code>
+    </pre>
+    <input type = "radio" id = "calculate_binary_plus" name = "calculate_binary" value = "0" checked>
+    <label for = "calculate_binary_plus">和</label>
+    <input type = "radio" id = "calculate_binary_minus" name = "calculate_binary" value = "1">
+    <label for = "calculate_binary_minus">差</label>
+    <input type = "radio" id = "calculate_binary_product" name = "calculate_binary" value = "2">
+    <label for = "calculate_binary_product">積</label>
+    <input type = "radio" id = "calculate_binary_quotient" name = "calculate_binary" value = "3">
+    <label for = "calculate_binary_quotient">商</label>
+    <br>
+    <label for="number1">数値1:</label>
+    <input type="number" id="product_number1" placeholder="数値を入力">
+    <br>
+    <label for="number2">数値2:</label>
+    <input type="number" id="product_number2" placeholder="数値を入力">
+    <br>
+    <button onclick="calculate0()">計算する</button>
+    <br><br>
+    次に条件分岐について解説する．
+    <pre>
+        <code>
+let breakfast = "bread";
+if (breakfast == "rice") {
+    console.log("So Good!");
+} else {
+    console.log("You are died");
+}
+        </code>
+    </pre>
+    これはbreakfastがriceならSo Good!が出力され，そうでないならYou are diedが出力される．
+    なにかプログラミング言語を触れたことがある人なら馴染み深いであろう．
+    いくつかの条件をテストするにはelse ifを用いる．
+    <pre>
+        <code>
+let age = 100;
 
+if (age &lt; 1000) {
+    console.log("young");
+} else if (age &gt; 10000) {
+    console.log("old");
+} else {
+    console.log("normal");
+}
+        </code>
+    </pre>
+    三項演算子?<br>
+    C言語にもある疑問符演算子はJavaScriptでも使用することが出来る．
+    <pre>
+        <code>
+let result = condition ? value1 : value2;
+        </code>
+    </pre>
+    conditionが評価され，真であればvalue1が返ってきて，そうでなければ，value2が返ってくる．
+    <pre>
+        <code>
+let akaten = (score &lt; 60) ? "赤点だよ" : "提出物だしてる？";
+        </code>
+    </pre>
+    これはscoreが60未満であればakatenに"赤点だよ"が代入され
+    60以上だと"提出物だしてる？"が代入される．<br><br>
+    次に繰り返し処理について解説する．<br>
+    while文は次のとおりである．
+    <pre>
+        <code>
+while (condition){
+    // 処理を書く
+}
+        </code>
+    </pre>
+    conditionがtrueの間処理の部分が実行される．<br>
+    次にfor文
+    <pre>
+        <code>
+for (begin; condition; step){
+    // 処理を書く
+}
+        </code>
+    </pre>
+    大抵の場合以下のようにする．
+    <pre>
+        <code>
+for (let i = 0; i &lt; 10; i++){
+    console.log(i);
+} 
+/*
+出力は
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+*/
+        </code>
+    </pre>
+    break文を挿入するとループを脱出することができる．
+    <pre>
+        <code>
+for (let i = 0; i &lt; 10000; i++) {
+    console.log(i);
+    if (i == 3) break;
+}
+/*
+出力は
+0
+1
+2
+3
+*/
+        </code>
+    </pre>
+    continue文は次のループにする命令である．
+    <pre>
+        <code>
+for (let i = 0; i &lt; 20; i++) {
+    if (i % 5 != 0) {
+        continue;
+    }
+    console.log(i);
+}
+/*
+出力は，
+0
+5
+10
+15
+*/
+        </code>
+    </pre>
 
 
 </div>
