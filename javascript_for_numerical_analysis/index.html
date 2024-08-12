@@ -5,7 +5,7 @@
     <title>JavaScriptで数値解析</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width = device-width">
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="main.css">
 
     <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -13,10 +13,8 @@
     <script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class = "article">
+<body>
     <h1 id = "title">JavaScriptで数値解析</h1>
-<div class="main">
-<div class = "left">
     JavaScriptの簡単な入門と，JavaScriptを用いた簡単な数値解析を行う．
 まず，定番の「Hello World」は以下をJsファイルに書くことで実行できる．
     <pre>
@@ -323,6 +321,12 @@ console.log(number); // 10
         \[ y(t) = e^{kt} \]
     </div>
     となる．<br>
+    代表的な微分方程式の数値解法は
+    <ul>
+        <li>オイラー法</li>
+        <li>ルンゲ・クッタ法</li>
+    </ul>
+    だが，より易しいオイラー法を用いる．<br>
     <label for="number1">\(k\):</label>
     <input type="number" id="problem0_k" value = "0.1" placeholder="数値を入力">
     <br>
@@ -332,13 +336,26 @@ console.log(number); // 10
     <br>
     <button onclick="problem0()">グラフをプロットする</button>
     
-    <div class="canvas-parent" id="canvasParent">
+    <div class="canvas-parent" id="canvasParent0">
         <canvas id="canvas"></canvas>
     </div>
     次に
-    
-</div>
-</div>
+    <div class = "formula">
+        \[\frac{\text{d}^{2}y}{\text{d}t^{2}} = -\omega^2 y \]
+    </div>
+    という，単振動の微分方程式を考えよう．この方程式の解はよく知られていて，
+    <div class = "formula">
+        \[ y(t) = A\cos(\omega t) + B\sin(\omega t)\]
+    </div>
+    で与えられる．
+    <div class="canvas-parent" id="canvasParent1">
+        <canvas id="canvas1"></canvas>
+    </div>
+
+    <h2>参考サイト</h2>
+    <a href = "https://ja.javascript.info/">javascript.info</a><br>
+    <a href = "https://ocw.nagoya-u.jp/files/58/11.pdf">オイラー法</a>
+
 <script src = "numerical_analysis.js"></script>
 </body>
 
